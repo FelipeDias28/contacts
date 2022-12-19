@@ -39,7 +39,10 @@ ThemeData androidTheme() {
         fontFamily: "Poppins",
       ),
     ),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: primaryColor,
+      secondary: accentColor,
+    ),
     primaryColor: primaryColor,
-    accentColor: accentColor,
   );
 }
