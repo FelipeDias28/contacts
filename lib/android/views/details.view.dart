@@ -1,3 +1,4 @@
+import 'package:contacts/android/views/address.view.dart';
 import 'package:contacts/android/views/editor-contact.view.dart';
 import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/material.dart';
@@ -157,7 +158,14 @@ class DetailsView extends StatelessWidget {
             isThreeLine:
                 true, // Utilizando quando o Title ou Subtitle não é somente uma linha,
             trailing: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AddressView(),
+                  ),
+                );
+              },
               child: Icon(
                 Icons.pin_drop,
                 color: Theme.of(context).primaryColor,
