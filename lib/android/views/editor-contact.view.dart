@@ -53,9 +53,21 @@ class EditorContactView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
-                child: const Text("Salvar"),
-                onPressed: () {},
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton.icon(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Theme.of(context).primaryColor),
+                  ),
+                  label: const Text("Salvar"),
+                  icon: Icon(
+                    Icons.save,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+                  onPressed: () {},
+                ),
               ),
             ],
           ),
